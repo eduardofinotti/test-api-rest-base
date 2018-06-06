@@ -1,7 +1,6 @@
-Given("I have the rote {string}") do |rote|
-      @url_token = rote
-end
+# Class to get users
 
+# Request get users
 When("I make a get in this rote") do
   query = {
   }
@@ -16,6 +15,7 @@ When("I make a get in this rote") do
   
 end
 
+# Valid return dates of request
 Then("I get the user named {string}") do |name|
   expect(@json_result['data']['first_name']).to eq name
 end

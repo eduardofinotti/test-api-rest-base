@@ -1,3 +1,6 @@
+# Class to register users
+
+# Request regiter users
 When("I make a post in this rote with atribute email {string} and atribute password {string}") do |email, password|
   
   @result = RegresAPI.post(@url_token.to_str, 
