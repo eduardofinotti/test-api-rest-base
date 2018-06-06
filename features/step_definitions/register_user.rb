@@ -6,11 +6,6 @@ When("I make a post in this rote with atribute email {string} and atribute passw
              }.to_json,
     :headers => { 'Content-Type' => 'application/json' } )
 
-  @parsed_register = JSON.parse(@result.response.body)
+  @parsed_result = JSON.parse(@result.response.body)
 
-end
-
-Then("it should return the attribute token not equal zero") do
-  expect(@parsed_register['token']).not_to eq 0
-  expect(@parsed_register['token']).not_to eq ""
 end
