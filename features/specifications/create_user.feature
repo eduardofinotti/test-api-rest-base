@@ -4,15 +4,14 @@ As a customer
 I want to be able to create users
 Because I want to save your data
 
-@create
   Scenario Outline: Create user
     Given I have the rote "/api/users"
     When I make a post in this rote with attribute name <name> and atribute job <job>
-    Then it should return a response with a "201" response code
-    And it should return the attribute name with <name>
-    And it should return the attribute job with <job>
-    And it should return the attribute "id" not equal zero
-    And it should return the attribute "createAt" not equal zero
+    Then return a response with a <code> response code
+    And return the attribute <attr_name> with <name>
+    And return the attribute <attr_job> with <job>
+    And return the attribute <attr_id> not equal zero
+    And return the attribute <attr_createAt> not equal zero
   Examples: 
-  | name | job | 
-  | "Eduardo Finotti"  | "QA Tester" |
+  |        name        |     job     |  code  | attr_name | attr_job | attr_id | attr_createAt | 
+  | "Eduardo Finotti"  | "QA Tester" |  "201" |   "name"  |  "job"   |  "id"   |   "createAt"  |
