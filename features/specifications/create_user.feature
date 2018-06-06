@@ -1,10 +1,9 @@
 Feature: Create Users
 
 As a customer
-I want to be able to get users
-Because I want to see who is registered
+I want to be able to create users
+Because I want to save your data
 
-@create
   Scenario Outline: Create user
     Given I have the rote "/api/users"
     When I make a post in this rote with atribute name <name> and atribute job <job>
