@@ -4,8 +4,10 @@ As a customer
 I want to be able to register users
 Because I want to login on application
 
-  Scenario Outline: Register user with sucess
+Background: rote
     Given I have the rote "/api/register"
+
+  Scenario Outline: Register user with sucess
     When I make a post in this rote with atribute email <email> and atribute password <password>
     Then return a response with a "201" response code
     And return the attribute "token" not equal zero
@@ -14,7 +16,6 @@ Because I want to login on application
   | "eduardo@test.com" | "pass123" |
 
   Scenario Outline: Register user with invalid data 
-    Given I have the rote "/api/register"
     When I make a post in this rote with atribute email <email> and atribute password <password>
     Then return a response with a <attr_code> response code
     And return the attribute <attr_error> with <error>
