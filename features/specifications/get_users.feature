@@ -24,3 +24,8 @@ Because I want to see who is registered
     Given I have the rote "/api/users/999"
     When I make a get in this rote
     Then return a response with a "404" response code
+
+  Scenario: Get a list user with dalay 3
+    Given I have the rote "/api/users?delay=3"
+    When I make a get in this rote
+    Then return a response with a "200" response code

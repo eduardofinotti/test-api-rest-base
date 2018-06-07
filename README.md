@@ -1,5 +1,102 @@
 # Test for Applicants
 
+Testing Regres API (REST) with Cucumber and HttpParty in Ruby language
+https://reqres.in/
+
+### Introduction ###
+
+I wrote my tests trying to write as few code as possible.
+I made the most of the methods.
+
+Within the project files, on top of each method there is a comment,
+with a summary of what the method does.
+
+I tried to write a minimum number of test scenarios
+which guarantees the most important features of the API.
+
+In sumary to run the prujet, just run: $cucumber. 
+End to generate the report just run: $cucumber -p report.
+
+IT IS ALL EXPLAINED BELOW:
+
+## Setting up the environment ##
+
+### Installing rbenv ###
+Execute os seguintes comandos:
+```shell
+$ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+
+$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+$ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+$ source ~/.bashrc
+```
+
+Add in ~/.bash_profile:
+```shell
+eval "$(rbenv init -)"
+```
+
+List available versions:
+```shell
+rbenv install -l
+```
+
+Install a version:
+```shell
+rbenv install 2.4.2
+```
+
+Make the default version for all projects
+```shell
+$ rbenv global 2.4.2
+```
+
+Check the installed Ruby version
+```shell
+$ ruby -v
+```
+
+### Download project ###
+
+```shell
+git clone https://github.com/xing/test_qa_api_kununu-eduardofinotti.git
+```
+
+### Installing the bundler ###
+Navigate within the project and install the bundler
+```shell
+cd /test_qa_api_kununu-eduardofinotti
+gem install bundler
+```
+
+### Installing the gems ###
+Run the command at the root of the project:
+```shell
+bundle install
+```
+
+### To run ###
+Run the command at the root of the project:
+```shell
+cucumber
+```
+
+### To run with report ###
+Run the command at the root of the project:
+```shell
+cucumber -p report
+```
+So, the report is generated in folder /report.
+The report has the current date and hour.
+
+ ### The Author ###
+
+Eduardo Finotti
+E-mail: eduardo.finotti@hotmail.com
+LinkedIn: https://www.linkedin.com/in/eduardo-finotti/
+
+## ----------------------------------------------- ##
+
 ## Context
 
 As a QA in an Agile team, you’re part of a team developing a new cool feature, which mainly comprises a front-end application and a REST API. 
@@ -29,4 +126,3 @@ Feel free to adopt the best technologies you find suitable for the end goal. Sti
 2. Document your work.
 3. Provide a README and instructions for how we can run your solution. **Note** It should be runnable with one command.
 4. Respect modularity and scalable solution for further test suites.
-
