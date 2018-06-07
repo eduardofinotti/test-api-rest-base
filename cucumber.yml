@@ -1,0 +1,4 @@
+# This arquive has the profiles to run the tests.
+# To execute generating report, just run: $cucumber -p report
+# To execute without report, just run: $cucumber 
+report: --format progress --format html --out=report/<%= Time.now.strftime("%d.%m.%Y-%H:%M:%S") %>-features-report.html
